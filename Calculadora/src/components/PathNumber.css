@@ -1,0 +1,51 @@
+/*pantalla para mostrar el resultado del calculo*/
+.inputCalculator{
+    display: grid;
+    border-radius: 20px;
+    background-color: #f59a03;
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    text-align: right;
+}
+
+.inputCalculator:hover {
+    cursor: pointer;
+}
+
+.operator {
+    background-color: #f59a03;
+}
+
+.number {
+    padding: 16px;
+    font-size: 1.5em;
+    gap: .5em;
+    font-weight: 500;
+    color: #646cff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.cero {
+    grid-column: 1/3;
+}
+
+.calculatorButton {
+    background-color: gray;
+}
+
+.calculatorButton:hover {
+    cursor: pointer;
+}
+
+/* media querys para dispositivos mobiles */
+@media screen and (max-width: 768px) {
+    .inputCalculator {
+        font-size: 1.5em;
+    }
+
+    .number {
+        font-size: 1.2em;
+    }
+}
