@@ -3,7 +3,7 @@ import Boton from "./Boton"
 import './PathNumber.css'
 
 export default function PathNumber() {
-    const [number, setNumber] = useState({ operation: '0', result:''})
+    const [number, setNumber] = useState({ operation: '0'})
 
     const handleWritten = (e) => {
         if (number.operation === '0') {
@@ -11,12 +11,13 @@ export default function PathNumber() {
         } else {
             setNumber({operation: number.operation + e.target.textContent})
         }
+        
     }
     const handleClear = () => {
         setNumber({operation: '0'})
     }
     const handleResult = () => {
-        setNumber({operation: eval(number.operation)})
+            setNumber({operation: eval(number.operation)})
     }
     const handlePorcentage = () => {
         setNumber({operation: number.operation / 100})
@@ -34,17 +35,17 @@ export default function PathNumber() {
                 <Boton valueNumber="+/-" clase="calculatorButton" handleClick={handleNegative}/>
                 <Boton valueNumber="%" clase="calculatorButton" handleClick={handlePorcentage}/>
                 <Boton valueNumber="/" clase="operator" handleClick={handleWritten}/>
-                <Boton valueNumber="7" handleClick={handleWritten} />
-                <Boton valueNumber="8" handleClick={handleWritten} />
-                <Boton valueNumber="9" handleClick={handleWritten} />
+                <Boton valueNumber="7" clase="numberEnter" handleClick={handleWritten} />
+                <Boton valueNumber="8" clase="numberEnter" handleClick={handleWritten} />
+                <Boton valueNumber="9" clase="numberEnter" handleClick={handleWritten} />
                 <Boton valueNumber="*" clase="operator" handleClick={handleWritten}/>
-                <Boton valueNumber="4" handleClick={handleWritten} />
-                <Boton valueNumber="5" handleClick={handleWritten} />
-                <Boton valueNumber="6" handleClick={handleWritten} />
+                <Boton valueNumber="4" clase="numberEnter" handleClick={handleWritten} />
+                <Boton valueNumber="5" clase="numberEnter" handleClick={handleWritten} />
+                <Boton valueNumber="6" clase="numberEnter" handleClick={handleWritten} />
                 <Boton valueNumber="-" clase="operator" handleClick={handleWritten} />
-                <Boton valueNumber="1" handleClick={handleWritten} />
-                <Boton valueNumber="2" handleClick={handleWritten} />
-                <Boton valueNumber="3" handleClick={handleWritten} />
+                <Boton valueNumber="1" clase="numberEnter" handleClick={handleWritten} />
+                <Boton valueNumber="2" clase="numberEnter" handleClick={handleWritten} />
+                <Boton valueNumber="3" clase="numberEnter" handleClick={handleWritten} />
                 <Boton valueNumber="+" clase="operator" handleClick={handleWritten} />
                 <Boton valueNumber="0" clase="cero" handleClick={handleWritten} />
                 <Boton valueNumber="." handleClick={handleWritten}/>
